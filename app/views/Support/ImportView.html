@@ -1,15 +1,51 @@
 ﻿<div ng-controller="importController as impCtrl">
-    <p>
-        {{impCtrl.bootMessage}}
-    </p>
-</div>
 
-<div>
-    <p>
-        <label class="control-label">Select File</label>
-        <input type="file" id="file1" name="file" class="file" multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-               ng-files="getTheFiles($files)" />
-        <input type="button" ng-click="uploadFiles()" value="Upload" />
-    </p>
+    <h3>{{impCtrl.bootMessage}}</h3>
+</div>
+<hr />
+<div class="panel panel-default">
+    <form class="form-inline">
+        <div>
+            <label class="control-label">Usage</label>
+        </div>
+        <div>
+            <input type="file"
+                   id="file1"
+                   name="file"
+                   class="form-control file"
+                   multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                   ng-files="getTheFiles($files)" />
+            <input type="button"
+                   class="form-control btn btn-default"
+                   ng-click="uploadFiles()"
+                   value="Upload" />
+            <input type="button"
+                   class="form-control btn btn-warning"
+                   value="Reset" />
+        </div>
+    </form>
+    <div>
+        <p></p>
+    </div>
+    <form class="form-inline">
+        <div>
+            <label class="control-label">Usage and Rate</label>
+        </div>
+        <div>
+            <input type="file"
+                   id="file1"
+                   name="file"
+                   class="form-control file"
+                   multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                   ng-files="getTheFiles($files)" />
+            <input type="button"
+                   class="form-control btn btn-default"
+                   ng-click="uploadFiles()"
+                   value="Upload" />
+            <input type="button"
+                   class="form-control btn btn-warning"
+                   value="Reset" />
+        </div>
+    </form>
 </div>
 

@@ -1,4 +1,4 @@
-﻿var app = angular.module('bism', ['ngRoute', 'ngCookies', 'app.controllers', 'envconfig']);
+﻿var app = angular.module('bism', ['ngRoute', 'ngCookies', 'ngResource','app.controllers', 'envconfig']);
 
 app.config(['$routeProvider', '$locationProvider',  function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');

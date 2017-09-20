@@ -1,8 +1,7 @@
 ﻿angular.module('app.controllers')
-    .controller('importController', ['$scope', '$routeParams', '$http', 'EnvConfig', function ($scope, $routeParams, $http, EnvConfig) {
+    .controller('importController', ['$scope', '$routeParams', '$http', 'EnvConfig',  function ($scope, $routeParams, $http, EnvConfig) {
         this.bootMessage = 'Inside Import Controller / View';
-       
-
+        
         if (window.File && window.FileReader && window.FileList && window.Blob) {
 
             var formdata = new FormData();
@@ -27,6 +26,10 @@
                         var result = response.data;
                         console.log(response);
                     });
+            };
+
+            $scope.resetUsage = function () {
+
             };
 
         } else {
