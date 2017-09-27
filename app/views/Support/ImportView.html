@@ -4,48 +4,60 @@
 </div>
 <hr />
 <div class="panel panel-default">
-    <form class="form-inline">
+    <div ng-form="usageForm" class="form-inline">
         <div>
             <label class="control-label">Usage</label>
         </div>
         <div>
             <input type="file"
-                   id="file1"
-                   name="file"
+                   id="fileUsage"
+                   name="fileUsage"
+                   required
+                   valid-file
+                   ng-model="UsageUpload"
                    class="form-control file"
                    multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
                    ng-files="getTheFiles($files)" />
             <input type="button"
                    class="form-control btn btn-default"
                    ng-click="uploadFiles()"
+                   ng-disabled="usageForm.$pristine"
                    value="Upload" />
             <input type="button"
+                   ng-click="resetUsage(usageForm)"
                    class="form-control btn btn-warning"
                    value="Reset" />
+            {{this.usageResponse}}
         </div>
-    </form>
+    </div>
     <div>
         <p></p>
     </div>
-    <form class="form-inline">
+    <div ng-form="usageRateForm" class="form-inline">
         <div>
             <label class="control-label">Usage and Rate</label>
         </div>
         <div>
             <input type="file"
-                   id="file1"
-                   name="file"
-                   class="form-control file"
-                   multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-                   ng-files="getTheFiles($files)" />
+            id="fileUsageRate"
+            name="fileUsageRate"
+            required
+            valid-file
+            ng-model="UsageRateUpload"
+            class="form-control file"
+            multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+            ng-files="getTheFiles($files)" />
             <input type="button"
                    class="form-control btn btn-default"
                    ng-click="uploadFiles()"
+                   ng-disabled="usageRateForm.$pristine"
                    value="Upload" />
             <input type="button"
+                   ng-click="resetUsageRate(usageRateForm)"
                    class="form-control btn btn-warning"
                    value="Reset" />
+            {{this.usageRateResponse}}
         </div>
-    </form>
+    </div>
 </div>
 
